@@ -65,8 +65,9 @@ kotlin {
 dependencies {
     implementation(project(":core:netease"))
 
-    // Compose for Wear OS（Material 3 + Expressive 动效）
+    // Compose for Wear OS
     implementation(platform("androidx.compose:compose-bom:2025.09.00"))
+    implementation("androidx.wear.compose:compose-material:1.3.1")
     implementation("androidx.wear.compose:compose-material3:1.6.2")
     implementation("androidx.wear.compose:compose-foundation:1.6.2")
     implementation("androidx.wear.compose:compose-navigation:1.6.2")
@@ -74,18 +75,18 @@ dependencies {
     implementation("androidx.compose.ui:ui-tooling-preview")
     implementation("androidx.compose.foundation:foundation")
     implementation("androidx.compose.material3:material3") // 仅用 Slider
-    implementation("androidx.compose.material:material-icons-extended") // 扩展图标（Pause/SkipNext/QrCode2 等）
+    implementation("androidx.compose.material:material-icons-extended") // 扩展图标
     implementation("androidx.activity:activity-compose:1.9.2")
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.8.0")
     implementation("androidx.core:core-ktx:1.13.1")
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.8.6")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.9.0")
 
-    // 播放
+    // 播放组件
     implementation("androidx.media3:media3-exoplayer:1.4.1")
     implementation("androidx.media3:media3-session:1.4.1")
     implementation("androidx.media3:media3-common:1.4.1")
 
-    // 图片
+    // 图片异步加载
     implementation("io.coil-kt:coil-compose:2.7.0")
 }
